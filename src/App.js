@@ -1,12 +1,24 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import Navs from './components/Navs';
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 
 function App() {
   return (
-    <>
-      <h1>Box office app</h1>
-    </>
+    <div>
+      <Switch>
+      
+          <Home />
+          <Starred />
+        
+
+        <Route>
+          <div>Not found</div>
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
